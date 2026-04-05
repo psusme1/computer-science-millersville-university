@@ -1,0 +1,32 @@
+<head>
+<title>Registration</title>
+</head>
+
+<body>
+
+<?php
+
+mysql_connect( "localhost", "dbteam4", "team42005" );
+mysql_select_db( "shawnjoe" );
+
+$check = "SELECT UserID FROM user
+               WHERE UserID = '" . $_POST[ "uName" ] . "'" .
+               " AND Password = '" . $_POST[ "userpw" ] . "'";
+$results = mysql_query( $loginquery );
+$count = mysql_num_rows( $results );
+$name = mysql_fetch_array( $results );
+if( $count == 0)
+$sql = "INSERT INTO user values ($_POST[uName]firstName
+               FROM user
+               WHERE UserID = '" . $_POST[ "username" ] . "'" .
+               " AND Password = '" . $_POST[ "userpw" ] . "'";
+$results = mysql_query( $loginquery );
+$count = mysql_num_rows( $results );
+$name = mysql_fetch_array( $results );
+if( $count == 0)
+
+
+?>
+
+</body>
+</html>
